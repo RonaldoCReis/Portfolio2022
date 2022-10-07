@@ -1,10 +1,12 @@
 $browser-context: 16; // Default
+@function rem($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}rem;
+}
 
 $black: #26252c;
 $yellow: #f0ce4a;
-$white: #efecf3;
-$font1: em(14);
-
-@function em($pixels, $context: $browser-context) {
-  @return #{$pixels/$context}em;
-}
+$gray: #efecf3;
+$white: #f8f6fb;
+$font1: rem(14);
+$font3: rem(24);
+$shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);

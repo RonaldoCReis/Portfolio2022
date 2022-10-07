@@ -7,10 +7,12 @@ const Header = () => {
   const links: string[] = ['Inicio', 'Tecnologias', 'Portfólio', 'Formações'];
   const [active, setActive] = React.useState('Inicio');
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} container`}>
       <nav className={styles.nav}>
         {links.map((link) => (
-          <HeaderLink active={active}>{link}</HeaderLink>
+          <HeaderLink key={link} active={active}>
+            {link}
+          </HeaderLink>
         ))}
       </nav>
       <Button>Entre em contato</Button>

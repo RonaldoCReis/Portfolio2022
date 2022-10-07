@@ -9,7 +9,6 @@ type proptypes = {
 const HeaderLink = ({ children, active }: proptypes) => {
   return (
     <a
-      href="javascript:;"
       className={`${styles.navLink} ${
         active === children ? styles.active : ''
       }`}
