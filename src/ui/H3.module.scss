@@ -1,0 +1,19 @@
+@import '../functions.scss';
+
+.h3 {
+  font-size: $font3;
+  font-weight: 500;
+  position: relative;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    background: $yellow;
+    height: rem(4);
+    width: rem(43);
+    bottom: rem(-6);
+    left: 0;
+    border-radius: 1px;
+  }
+}

@@ -1,0 +1,8 @@
+@import '../functions.scss';
+
+.card {
+  background: $white;
+  padding: rem(30);
+  box-shadow: $shadow;
+  border-radius: rem(20);
+}
