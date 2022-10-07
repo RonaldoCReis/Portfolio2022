@@ -1,0 +1,10 @@
+$browser-context: 16; // Default
+
+$black: #26252c;
+$yellow: #f0ce4a;
+$white: #efecf3;
+$font1: em(14);
+
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}

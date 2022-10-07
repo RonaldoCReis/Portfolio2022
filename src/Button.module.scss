@@ -1,0 +1,12 @@
+@import './functions.scss';
+
+.button {
+  border: none;
+  background: $black;
+  color: $white;
+  font-size: $font1;
+  padding: em(15) em(30);
+  border-radius: em(2);
+  box-shadow: 0 1 2 0 rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}

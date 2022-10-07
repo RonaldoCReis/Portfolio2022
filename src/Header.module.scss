@@ -1,0 +1,16 @@
+@import './functions.scss';
+
+.header {
+  display: flex;
+
+  justify-content: space-between;
+  margin-top: em(45);
+  align-items: center;
+}
+
+.nav {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
