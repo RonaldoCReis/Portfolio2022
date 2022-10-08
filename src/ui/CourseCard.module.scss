@@ -1,0 +1,31 @@
+@import '../functions.scss';
+
+.card {
+  flex: 1;
+  max-width: rem(470);
+  width: 100%;
+  background: $white;
+  border-radius: rem(20);
+  box-shadow: $shadow;
+  padding: rem(30);
+  margin-bottom: rem(30);
+  position: relative;
+}
+
+.card p {
+  font-size: $font1;
+  margin-top: rem(10);
+}
+
+.right {
+  align-self: flex-end;
+  background: #f6e292;
+}
+
+.card span {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: $font1;
+  color: #26252c4d;
+}

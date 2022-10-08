@@ -1,0 +1,11 @@
+@import './functions.scss';
+
+.container {
+  margin-top: rem(90);
+  margin-bottom: rem(90);
+}
+
+.courses {
+  display: flex;
+  flex-direction: column;
+}

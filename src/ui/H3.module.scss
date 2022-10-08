@@ -17,3 +17,8 @@
     border-radius: 1px;
   }
 }
+
+.transparent::before {
+  background: #26252c33;
+  width: rem(72);
+}

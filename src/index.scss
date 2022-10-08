@@ -18,7 +18,15 @@ body {
 }
 
 .container {
-  max-width: rem(1170);
+  max-width: calc(rem(1170) + rem(60));
+  padding-left: rem(30);
+  padding-right: rem(30);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-small {
+  max-width: calc(rem(770) + rem(60));
   padding-left: rem(30);
   padding-right: rem(30);
   margin-left: auto;
