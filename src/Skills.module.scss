@@ -7,6 +7,7 @@
 
 .skills {
   margin: rem(100);
+  margin-bottom: 0;
 }
 
 .list {
@@ -20,7 +21,7 @@
   display: flex;
   align-items: center;
   margin-right: rem(60);
-  font-size: $font1;
+  font-size: $font2;
 }
 
 .icon {
@@ -34,4 +35,7 @@
 
 .row {
   margin-top: rem(90);
+  &:last-of-type {
+    margin-bottom: rem(60);
+  }
 }

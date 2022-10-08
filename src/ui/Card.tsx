@@ -3,7 +3,7 @@ import styles from './Card.module.scss';
 
 type proptypes = {
   children: ReactElement;
-  container: boolean;
+  container?: boolean;
 };
 
 const Card = ({ children, container }: proptypes) => {

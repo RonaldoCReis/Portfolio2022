@@ -1,0 +1,31 @@
+@import '../functions.scss';
+
+.container {
+  padding-left: rem(15);
+  position: relative;
+  margin-bottom: rem(60);
+
+  &::before {
+    content: '';
+    display: block;
+    background: $yellow;
+    width: 4px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.title {
+  font-size: $font3;
+  font-weight: 500;
+  margin-bottom: rem(15);
+}
+
+.subtitle {
+  font-size: $font1;
+  font-weight: 400;
+  max-width: rem(200);
+  opacity: 80%;
+}

@@ -1,0 +1,22 @@
+@import './functions.scss';
+
+.container {
+  padding-top: rem(90);
+}
+
+.projects {
+  display: grid;
+  // flex-wrap: wrap;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  margin-bottom: rem(60);
+}
+
+.project {
+  flex: 1;
+  min-width: rem(370);
+  height: rem(208);
+  background: $white;
+  box-shadow: $shadow;
+  border-radius: rem(20);
+}
