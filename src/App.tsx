@@ -1,5 +1,7 @@
 import React from 'react';
+import Contact from './Contact';
 import Courses from './Courses';
+import Footer from './Footer';
 import Header from './Header';
 import Home from './Home';
 import Portfolio from './Portfolio';
@@ -13,6 +15,8 @@ const App = () => {
       <Skills />
       <Portfolio />
       <Courses />
+      <Contact />
+      <Footer />
     </>
   );
 };
