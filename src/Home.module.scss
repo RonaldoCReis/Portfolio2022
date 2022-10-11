@@ -27,9 +27,10 @@
     }
   }
   p {
-    opacity: 40%;
+    opacity: 50%;
     max-width: rem(330);
-    font-size: $font1;
+    font-size: rem(16);
+    font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
   }
 }
 

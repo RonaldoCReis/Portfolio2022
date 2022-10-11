@@ -14,7 +14,9 @@
 
 .card p {
   font-size: $font1;
+  // font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
   margin-top: rem(10);
+  opacity: 50%;
 }
 
 .right {
@@ -24,6 +26,7 @@
 
 .card span {
   position: absolute;
+  // font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
   top: 10px;
   right: 10px;
   font-size: $font1;

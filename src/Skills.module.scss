@@ -8,6 +8,7 @@
 .skills {
   margin: rem(100);
   margin-bottom: 0;
+  margin-top: rem(0);
 }
 
 .list {
@@ -35,6 +36,9 @@
 
 .row {
   margin-top: rem(90);
+  &:first-of-type {
+    // margin-top: rem(30);
+  }
   &:last-of-type {
     margin-bottom: rem(60);
   }

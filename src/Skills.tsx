@@ -5,7 +5,8 @@ import H3 from './ui/H3';
 import reactLogo from './img/react.png';
 import typescriptLogo from './img/typescript.png';
 import javascriptLogo from './img/javascript.png';
-import jqueryLogo from './img/jquery.png';
+import viteLogo from './img/vite.png';
+import jestLogo from './img/jest.png';
 import cssLogo from './img/css.png';
 import scssLogo from './img/scss.png';
 import bootstrapLogo from './img/bootstrap.png';
@@ -42,9 +43,15 @@ const Skills = () => {
                 </li>
                 <li className={styles.item}>
                   <i className={styles.icon}>
-                    <img src={jqueryLogo} alt="jquery Logo" />
+                    <img src={viteLogo} alt="Vite Logo" />
                   </i>
-                  <p>Jquery</p>
+                  <p>Vite</p>
+                </li>
+                <li className={styles.item}>
+                  <i className={styles.icon}>
+                    <img src={jestLogo} alt="Jest Logo" />
+                  </i>
+                  <p>Jest</p>
                 </li>
               </ul>
             </div>

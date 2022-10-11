@@ -13,7 +13,7 @@ const Contact = () => {
           href="https://api.whatsapp.com/send?phone=5511942594783"
           target="_blank"
         >
-          +55 11 94259-4783
+          55 11 94259-4783
         </a>
         <a href="mailto:ronaldocreis7@gmail.com">ronaldocreis7@gmail.com</a>
         <a href="https://linkedin.com/in/ronaldocreis" target="_blank">
