@@ -10,8 +10,12 @@ type proptypes = {
 };
 
 const CourseCard = ({ title, subtitle, year, right }: proptypes) => {
+  const direction = right ? 'fade-left' : 'fade-right';
   return (
-    <div className={`${styles.card} ${right ? styles.right : ''}`}>
+    <div
+      className={`${styles.card} ${right ? styles.right : ''}`}
+      data-aos={direction}
+    >
       <H3 transparent>{title}</H3>
       <p>{subtitle}</p>
       <span>{year}</span>

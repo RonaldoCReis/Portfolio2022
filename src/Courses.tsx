@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import H2 from './ui/H2';
 import styles from './Courses.module.scss';
 import CourseCard from './ui/CourseCard';
 import Link from './ui/Link';
+import Aos from 'aos';
 
 const Courses = () => {
   return (
@@ -40,7 +41,7 @@ const Courses = () => {
       </div>
       <div style={{ textAlign: 'right' }}>
         <Link href="https://www.linkedin.com/in/ronaldocreis/">
-          Veja mais no meu LinkedIn
+          Veja todos os cursos LinkedIn
         </Link>
       </div>
     </section>

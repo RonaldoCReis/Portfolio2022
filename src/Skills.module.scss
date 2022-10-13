@@ -36,10 +36,10 @@
 
 .row {
   margin-top: rem(90);
-  &:first-of-type {
-    // margin-top: rem(30);
-  }
   &:last-of-type {
     margin-bottom: rem(60);
   }
 }
+
+$aos-distance: 20px; // It has to be above import
+@import 'node_modules/aos/src/sass/aos.scss';
