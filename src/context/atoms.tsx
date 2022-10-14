@@ -19,3 +19,8 @@ export const skillsScrollState = atom({
   key: 'skillsScrollState',
   default: 0,
 });
+
+export const contactScrollState = atom({
+  key: 'contactScrollState',
+  default: 0,
+});

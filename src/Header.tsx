@@ -1,10 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useRecoilValue } from 'recoil';
 import {
+  contactScrollState,
   coursesScrollState,
   portfolioScrollState,
   skillsScrollState,
-} from './atoms';
+} from './context/atoms';
 import Button from './Button';
 import styles from './Header.module.scss';
 import HeaderLink from './HeaderLink';
@@ -23,6 +24,7 @@ const Header = () => {
   const skillsScroll = useRecoilValue(skillsScrollState);
   const portfolioScroll = useRecoilValue(portfolioScrollState);
   const coursesScroll = useRecoilValue(coursesScrollState);
+  const contactScroll = useRecoilValue(contactScrollState);
   // const { scroll } = useContext(MainContext);
   const [scroll, setScroll] = useState({
     skills: 0,
@@ -49,14 +51,30 @@ const Header = () => {
   function handleScroll(event: Event) {
     if (window.pageYOffset > 35) setActiveHeader(true);
     else setActiveHeader(false);
+    const offset = 200;
+    if (window.pageYOffset >= Math.floor(coursesScroll - offset)) {
+      setActive('Formações');
+    } else if (window.pageYOffset >= Math.floor(portfolioScroll - offset)) {
+      setActive('Portfolio');
+    } else if (window.pageYOffset >= Math.floor(skillsScroll - offset)) {
+      setActive('Tecnologias');
+    } else {
+      setActive('Inicio');
+    }
   }
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [skillsScroll, portfolioScroll, coursesScroll]);
 
+  function handleButton() {
+    window.scrollTo({
+      top: contactScroll,
+      behavior: 'smooth',
+    });
+  }
   return (
     <div
       className={`${styles.headerContainer} ${
@@ -76,7 +94,7 @@ const Header = () => {
               </HeaderLink>
             ))}
         </nav>
-        <Button>Entre em contato</Button>
+        <Button onClick={handleButton}>Entre em contato</Button>
       </header>
     </div>
   );

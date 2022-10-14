@@ -5,14 +5,15 @@ import Link from './ui/Link';
 import Aos from 'aos';
 import { MainContext } from './MainContext';
 import { useRecoilState } from 'recoil';
-import { portfolioScrollState } from './atoms';
+import { portfolioScrollState } from './context/atoms';
 
 const Portfolio = () => {
   const [scroll, setScroll] = useRecoilState(portfolioScrollState);
 
   const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    if (ref.current) setScroll(ref.current.getBoundingClientRect().y);
+    if (ref.current)
+      setScroll(ref.current.getBoundingClientRect().y + window.pageYOffset);
     console.log(scroll);
   }, [setScroll]);
   return (

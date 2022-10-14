@@ -6,14 +6,15 @@ import Link from './ui/Link';
 import Aos from 'aos';
 import { MainContext } from './MainContext';
 import { useRecoilState } from 'recoil';
-import { coursesScrollState } from './atoms';
+import { coursesScrollState } from './context/atoms';
 
 const Courses = () => {
   const [scroll, setScroll] = useRecoilState(coursesScrollState);
 
   const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    if (ref.current) setScroll(ref.current.getBoundingClientRect().y);
+    if (ref.current)
+      setScroll(ref.current.getBoundingClientRect().y + window.pageYOffset);
   }, [setScroll]);
   return (
     <section className={`container-small ${styles.container}`} ref={ref}>

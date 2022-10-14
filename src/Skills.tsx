@@ -17,7 +17,7 @@ import Link from './ui/Link';
 import Aos from 'aos';
 // import { MainContext } from './MainContext';
 import { useRecoilState } from 'recoil';
-import { skillsScrollState } from './atoms';
+import { skillsScrollState } from './context/atoms';
 
 const Skills = () => {
   const [scroll, setScroll] = useRecoilState(skillsScrollState);
@@ -25,7 +25,7 @@ const Skills = () => {
   useEffect(() => {
     Aos.init({ offset: 100, duration: 300, once: true });
     if (skills.current) {
-      setScroll(skills.current.getBoundingClientRect().y);
+      setScroll(skills.current.getBoundingClientRect().y + window.pageYOffset);
     }
   }, [setScroll]);
 
