@@ -1,11 +1,28 @@
 @import './functions.scss';
 
+.headerContainer {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  margin-top: rem(30);
+  transition: 0.3s;
+
+  &.active {
+    background: #efecf3f4;
+    backdrop-filter: blur(5px);
+    box-shadow: $shadow;
+    transition: 0.3s;
+  }
+}
+
 .header {
   display: flex;
-
   justify-content: space-between;
-  margin-top: rem(45);
   align-items: center;
+  width: 100%;
+  padding-top: rem(15);
+  padding-bottom: rem(15);
 }
 
 .nav {

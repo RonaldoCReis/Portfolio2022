@@ -1,12 +1,22 @@
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect, useRef } from 'react';
 import H2 from './ui/H2';
 import styles from './Portfolio.module.scss';
 import Link from './ui/Link';
 import Aos from 'aos';
+import { MainContext } from './MainContext';
+import { useRecoilState } from 'recoil';
+import { portfolioScrollState } from './atoms';
 
 const Portfolio = () => {
+  const [scroll, setScroll] = useRecoilState(portfolioScrollState);
+
+  const ref = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (ref.current) setScroll(ref.current.getBoundingClientRect().y);
+    console.log(scroll);
+  }, [setScroll]);
   return (
-    <section className={`container ${styles.container}`}>
+    <section className={`container ${styles.container}`} ref={ref}>
       <H2 subtitle="Veja alguns dos meus projetos e como foram feitos">
         Portfólio
       </H2>

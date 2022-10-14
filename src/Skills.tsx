@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import styles from './Skills.module.scss';
 import Card from './ui/Card';
 import H3 from './ui/H3';
@@ -15,14 +15,22 @@ import adobexdLogo from './img/adobexd.png';
 import storyBookLogo from './img/Storybook.png';
 import Link from './ui/Link';
 import Aos from 'aos';
+// import { MainContext } from './MainContext';
+import { useRecoilState } from 'recoil';
+import { skillsScrollState } from './atoms';
 
 const Skills = () => {
+  const [scroll, setScroll] = useRecoilState(skillsScrollState);
+  const skills = useRef<HTMLDivElement>(null);
   useEffect(() => {
     Aos.init({ offset: 100, duration: 300, once: true });
-  }, []);
+    if (skills.current) {
+      setScroll(skills.current.getBoundingClientRect().y);
+    }
+  }, [setScroll]);
 
   return (
-    <section className={styles.container}>
+    <section className={styles.container} ref={skills}>
       <div className="container">
         <Card>
           <div className={styles.skills}>

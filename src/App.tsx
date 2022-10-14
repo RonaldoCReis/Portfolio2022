@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { RecoilRoot } from 'recoil';
 import Contact from './Contact';
 import Courses from './Courses';
 import Footer from './Footer';
@@ -9,7 +10,7 @@ import Skills from './Skills';
 
 const App = () => {
   return (
-    <>
+    <RecoilRoot>
       <Header />
       <Home />
       <Skills />
@@ -17,7 +18,7 @@ const App = () => {
       <Courses />
       <Contact />
       <Footer />
-    </>
+    </RecoilRoot>
   );
 };
 

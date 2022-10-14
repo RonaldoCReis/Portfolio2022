@@ -1,13 +1,22 @@
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect, useRef } from 'react';
 import H2 from './ui/H2';
 import styles from './Courses.module.scss';
 import CourseCard from './ui/CourseCard';
 import Link from './ui/Link';
 import Aos from 'aos';
+import { MainContext } from './MainContext';
+import { useRecoilState } from 'recoil';
+import { coursesScrollState } from './atoms';
 
 const Courses = () => {
+  const [scroll, setScroll] = useRecoilState(coursesScrollState);
+
+  const ref = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (ref.current) setScroll(ref.current.getBoundingClientRect().y);
+  }, [setScroll]);
   return (
-    <section className={`container-small ${styles.container}`}>
+    <section className={`container-small ${styles.container}`} ref={ref}>
       <H2 subtitle="Um pouco sobre a minha jornada acadêmica">Formações</H2>
       <div className={styles.courses}>
         <CourseCard
