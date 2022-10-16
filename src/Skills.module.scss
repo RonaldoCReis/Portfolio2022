@@ -16,12 +16,13 @@
   flex-wrap: wrap;
   align-items: center;
   margin-top: rem(30);
+  gap: rem(45);
 }
 
 .item {
   display: flex;
   align-items: center;
-  margin-right: rem(60);
+  // margin-right: rem(60);
   font-size: $font2;
 }
 
@@ -31,7 +32,9 @@
   height: 50px;
   display: flex;
   align-items: center;
-  margin-right: rem(15);
+  margin-right: rem(10);
+  border-radius: rem(2);
+  overflow: hidden;
 }
 
 .row {

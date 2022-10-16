@@ -7,12 +7,14 @@ import typescriptLogo from './img/typescript.png';
 import javascriptLogo from './img/javascript.png';
 import viteLogo from './img/vite.png';
 import jestLogo from './img/jest.png';
+import recoilLogo from './img/recoil.svg';
 import cssLogo from './img/css.png';
 import scssLogo from './img/scss.png';
 import bootstrapLogo from './img/bootstrap.png';
 import figmaLogo from './img/figma.png';
 import adobexdLogo from './img/adobexd.png';
 import storyBookLogo from './img/Storybook.png';
+import tailWindLogo from './img/tailwind.png';
 import Link from './ui/Link';
 import Aos from 'aos';
 // import { MainContext } from './MainContext';
@@ -83,6 +85,16 @@ const Skills = () => {
                   </i>
                   <p>Jest</p>
                 </li>
+                <li
+                  className={styles.item}
+                  data-aos="fade-down"
+                  data-aos-delay="400"
+                >
+                  <i className={styles.icon}>
+                    <img src={recoilLogo} alt="Recoil Logo" />
+                  </i>
+                  <p>Recoil</p>
+                </li>
               </ul>
             </div>
             <div className={styles.row}>
@@ -127,6 +139,16 @@ const Skills = () => {
                     <img src={bootstrapLogo} alt="bootstrap Logo" />
                   </i>
                   <p>Bootstrap</p>
+                </li>
+                <li
+                  className={styles.item}
+                  data-aos="fade-down"
+                  data-aos-delay="300"
+                >
+                  <i className={styles.icon}>
+                    <img src={tailWindLogo} alt="tailwind Logo" />
+                  </i>
+                  <p>Tailwind</p>
                 </li>
               </ul>
             </div>

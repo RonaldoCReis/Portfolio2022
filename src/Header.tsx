@@ -51,7 +51,8 @@ const Header = () => {
   function handleScroll(event: Event) {
     if (window.pageYOffset > 35) setActiveHeader(true);
     else setActiveHeader(false);
-    const offset = 200;
+
+    const offset = screen.height / 2.5;
     if (window.pageYOffset >= Math.floor(coursesScroll - offset)) {
       setActive('Formações');
     } else if (window.pageYOffset >= Math.floor(portfolioScroll - offset)) {

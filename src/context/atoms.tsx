@@ -24,3 +24,14 @@ export const contactScrollState = atom({
   key: 'contactScrollState',
   default: 0,
 });
+
+export const modalState = atom({
+  key: 'modalState',
+  default: {
+    isOpen: false,
+    imgUrl: '',
+    title: '',
+    desc: '',
+    techs: new Array(),
+  },
+});

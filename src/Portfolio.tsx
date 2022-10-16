@@ -6,6 +6,7 @@ import Aos from 'aos';
 import { MainContext } from './MainContext';
 import { useRecoilState } from 'recoil';
 import { portfolioScrollState } from './context/atoms';
+import Modal from './ui/Modal';
 
 const Portfolio = () => {
   const [scroll, setScroll] = useRecoilState(portfolioScrollState);
@@ -21,8 +22,13 @@ const Portfolio = () => {
       <H2 subtitle="Veja alguns dos meus projetos e como foram feitos">
         Portfólio
       </H2>
+      <Modal />
       <div className={styles.projects}>
-        <div className={styles.project} data-aos="zoom-in" data-aos-delay="0">
+        <div
+          className={`${styles.project}`}
+          data-aos="zoom-in"
+          data-aos-delay="0"
+        >
           <img />
         </div>
         <div className={styles.project} data-aos="zoom-in" data-aos-delay="100">
