@@ -19,6 +19,7 @@
     &::before {
       content: '';
       background: $yellow;
+      border-radius: 1px;
       display: block;
       position: absolute;
       top: 45%;

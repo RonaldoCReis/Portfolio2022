@@ -23,6 +23,7 @@
     bottom: rem(12);
     left: rem(10);
     z-index: -1;
+    border-radius: 1px;
     animation: linkBar 0.2s forwards linear;
   }
   &.active {
