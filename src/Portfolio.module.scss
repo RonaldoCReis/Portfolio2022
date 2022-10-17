@@ -20,6 +20,7 @@
   box-shadow: $shadow;
   border-radius: rem(20);
   cursor: pointer;
+  overflow: hidden;
   &.active {
     // position: fixed !important;
     // height: 80vh;
@@ -29,5 +30,11 @@
     // transform: translate(-50%, -50%) !important;
     // z-index: 9999;
     opacity: 0 !important;
+  }
+  & img {
+    transition: 0.2s;
+  }
+  &:hover img {
+    transform: scale(1.03);
   }
 }

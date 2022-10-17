@@ -9,7 +9,7 @@
   justify-content: center;
   top: 0;
   left: 0;
-  background: #26252c4d;
+  background: #26252c77;
   z-index: 9999;
   .modal {
     width: 100%;
@@ -76,5 +76,18 @@
       background: $yellow;
       margin-right: 10px;
     }
+  }
+}
+
+.animateIn {
+  animation: animateIn 0.3s forwards;
+}
+
+@keyframes animateIn {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1);
   }
 }
