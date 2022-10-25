@@ -33,7 +33,7 @@ const Skills = () => {
 
   return (
     <section className={styles.container} ref={skills}>
-      <div className="container">
+      <div className={`container ${styles.card}`}>
         <Card>
           <div className={styles.skills}>
             <div className={styles.row}>

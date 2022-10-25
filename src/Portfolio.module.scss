@@ -5,17 +5,19 @@
 }
 
 .projects {
-  display: grid;
-  // flex-wrap: wrap;
-  grid-template-columns: 1fr 1fr 1fr;
+  // display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  // grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
   margin-bottom: rem(30);
 }
 
 .project {
   flex: 1;
-  min-width: rem(370);
-  height: rem(208);
+  min-width: rem(300);
+  aspect-ratio: 16/9;
+  // height: rem(208);
   background: $white;
   box-shadow: $shadow;
   border-radius: rem(20);

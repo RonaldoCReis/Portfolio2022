@@ -2,7 +2,7 @@
 
 .container {
   background: $black;
-  padding: rem(90) rem(30);
+  padding: rem(90) rem(0);
 }
 
 .skills {
@@ -41,6 +41,15 @@
   margin-top: rem(90);
   &:last-of-type {
     margin-bottom: rem(60);
+  }
+}
+
+@media (max-width: 960px) {
+  .skills {
+    margin: rem(30);
+  }
+  .row:first-of-type {
+    margin-top: rem(60);
   }
 }
 

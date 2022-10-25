@@ -41,7 +41,13 @@ const Portfolio = () => {
       title: 'Design System - Ignite',
       imgUrl: 'src/img/ignite.png',
       desc: 'Design system desenvolvido no figma e passado para o storybook',
-      techs: ['React', 'Typescript', 'Tailwind', 'Storybook', 'Figma'],
+      techs: ['React', 'Typescript', 'Vite ', 'Tailwind', 'Storybook', 'Figma'],
+    },
+    {
+      title: 'Blocks',
+      imgUrl: 'src/img/blocks.png',
+      desc: 'Uma aplicação web de blocos de anotação e design system com storybook',
+      techs: ['React', 'Typescript', 'Recoil', 'Vitest', 'Storybook', 'Figma'],
     },
   ];
   interface modalTypes {
@@ -63,11 +69,12 @@ const Portfolio = () => {
       </H2>
       <Modal />
       <div className={styles.projects}>
-        {projects.map((project) => (
+        {projects.map((project, index) => (
           <div
+            key={project.title + index}
             className={`${styles.project}`}
             data-aos="zoom-in"
-            data-aos-delay="0"
+            data-aos-delay={50 * index - 50}
             onClick={() => openModal(project)}
           >
             <img src={project.imgUrl} />
