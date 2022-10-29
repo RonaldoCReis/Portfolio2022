@@ -20,6 +20,7 @@ import Aos from 'aos';
 // import { MainContext } from './MainContext';
 import { useRecoilState } from 'recoil';
 import { skillsScrollState } from './context/atoms';
+import Wave from './ui/Wave';
 
 const Skills = () => {
   const [scroll, setScroll] = useRecoilState(skillsScrollState);
@@ -32,6 +33,8 @@ const Skills = () => {
   }, [setScroll]);
 
   return (
+    <>
+    <Wave/>
     <section className={styles.container} ref={skills}>
       <div className={`container ${styles.card}`}>
         <Card>
@@ -184,6 +187,7 @@ const Skills = () => {
         </Card>
       </div>
     </section>
+    </>
   );
 };
 

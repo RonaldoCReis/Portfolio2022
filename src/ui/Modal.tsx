@@ -35,7 +35,7 @@ const Modal = () => {
         } container`}
       >
         <div className={Styles.img}>
-          <img src={modal.imgUrl} alt={modal.title} />
+          <img loading="lazy" src={modal.imgUrl} alt={modal.title} />
         </div>
         <div>
           <h2 className={Styles.title}>{modal.title}</h2>
