@@ -1,16 +1,21 @@
-import React from 'react';
+import React, { ReactHTMLElement } from 'react';
 import styles from './H2.module.scss';
 
-type proptypes = {
+interface proptypes {
   children: string;
   subtitle: string;
-};
+  white?: boolean;
+}
 
-const H2 = ({ children, subtitle }: proptypes) => {
+const H2 = ({ children, subtitle, white }: proptypes) => {
   return (
     <div className={styles.container}>
-      <h2 className={styles.title}>{children}</h2>
-      <p className={styles.subtitle}>{subtitle}</p>
+      <h2 style={white ? { color: '#fff' } : {}} className={styles.title}>
+        {children}
+      </h2>
+      <p style={white ? { color: '#fff' } : {}} className={styles.subtitle}>
+        {subtitle}
+      </p>
     </div>
   );
 };

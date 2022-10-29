@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <main className={`${styles.main} container`}>
       <div className={styles.intro}>
-        <h1>Hi, I'm Ronaldo Reis A Front End Dev</h1>
+        <h1>Hi, I'm Ronaldo Reis A Front end dev</h1>
         <p>Also a web designer with passion for learning </p>
       </div>
       <div className={styles.donut}>
