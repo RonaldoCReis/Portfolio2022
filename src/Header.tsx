@@ -12,13 +12,13 @@ import HeaderLink from './HeaderLink';
 import { MainContext } from './MainContext';
 
 const Header = () => {
-  const [active, setActive] = React.useState('Inicio');
+  const [active, setActive] = React.useState('Home');
 
   const links: linkType[] = [
-    { title: 'Inicio', scroll: 'main' },
-    { title: 'Tecnologias', scroll: 'skills' },
+    { title: 'Home', scroll: 'main' },
+    { title: 'Stack', scroll: 'skills' },
     { title: 'Portfolio', scroll: 'portfolio' },
-    { title: 'Formações', scroll: 'courses' },
+    { title: 'Studies', scroll: 'courses' },
   ];
   // const scroll = useRecoilValue(scrollState);
   const skillsScroll = useRecoilValue(skillsScrollState);
@@ -54,13 +54,13 @@ const Header = () => {
 
     const offset = screen.height / 2.5;
     if (window.pageYOffset >= Math.floor(coursesScroll - offset)) {
-      setActive('Formações');
+      setActive('Studies');
     } else if (window.pageYOffset >= Math.floor(portfolioScroll - offset)) {
       setActive('Portfolio');
     } else if (window.pageYOffset >= Math.floor(skillsScroll - offset)) {
-      setActive('Tecnologias');
+      setActive('Stack');
     } else {
-      setActive('Inicio');
+      setActive('Home');
     }
   }
   useEffect(() => {
@@ -95,7 +95,7 @@ const Header = () => {
               </HeaderLink>
             ))}
         </nav>
-        <Button onClick={handleButton}>Entre em contato</Button>
+        <Button onClick={handleButton}>Contact me</Button>
       </header>
     </div>
   );

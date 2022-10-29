@@ -6,7 +6,7 @@
   align-items: center;
   margin-top: 10vh;
   margin-bottom: 20vh; //tremp
-  height: 55vh;
+  height: 53vh;
   position: relative;
   // min-height: 60vh;
 }
@@ -14,8 +14,8 @@
 .intro {
   z-index: 2;
   h1 {
-    max-width: rem(600);
-    font-size: rem(48);
+    max-width: rem(550);
+    font-size: rem(56);
     line-height: 125%;
     font-weight: 500;
     position: relative;
@@ -27,13 +27,13 @@
       position: absolute;
       top: 45%;
       width: 32%;
-      height: 4px;
+      height: 5px;
     }
   }
   p {
     opacity: 50%;
-    max-width: rem(330);
-    font-size: rem(16);
+    max-width: rem(450);
+    font-size: rem(20);
     font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
   }
 }

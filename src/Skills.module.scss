@@ -53,5 +53,14 @@
   }
 }
 
+@media (max-width: 680px) {
+  .skills {
+    margin: rem(15);
+  }
+  .row:first-of-type {
+    margin-top: rem(30);
+  }
+}
+
 $aos-distance: 20px; // It has to be above import
 @import 'node_modules/aos/src/sass/aos.scss';

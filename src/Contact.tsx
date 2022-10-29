@@ -15,7 +15,7 @@ const Contact = () => {
   return (
     <section className={styles.container} ref={contact}>
       <div className="container">
-        <CenterTitle>Entre em contato</CenterTitle>
+        <CenterTitle>Contact me</CenterTitle>
       </div>
       <div className={styles.links}>
         <a

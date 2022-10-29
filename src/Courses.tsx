@@ -18,32 +18,32 @@ const Courses = () => {
   }, [setScroll]);
   return (
     <section className={`container-small ${styles.container}`} ref={ref}>
-      <H2 subtitle="Um pouco sobre a minha jornada acadêmica">Formações</H2>
+      <H2 subtitle="More about my formations and courses">Studies</H2>
       <div className={styles.courses}>
         <CourseCard
-          title="Tecnico em Informática para Internet"
+          title="Internet IT Technician"
           subtitle="Etec de Poá"
           year="2017 - 2019"
         />
         <CourseCard
-          title="Web Design Completo"
+          title="Complete Web Design"
           subtitle="Origamid"
           year="2020"
           right
         />
         <CourseCard
-          title="Bacharel em Sistemas de Informação"
+          title="Bachelor in Information Systems"
           subtitle="Universidade Paulista"
           year="2020 - 2023"
         />
         <CourseCard
-          title="CSS Avançado / Flexbox / Grid / SCSS"
+          title="Advanced CSS"
           subtitle="Origamid"
           year="2020"
           right
         />
         <CourseCard
-          title="React Completo"
+          title="Complete React"
           subtitle="Origamid"
           year="2022"
           right
@@ -51,7 +51,7 @@ const Courses = () => {
       </div>
       <div style={{ textAlign: 'right' }}>
         <Link href="https://www.linkedin.com/in/ronaldocreis/">
-          Veja todos os cursos LinkedIn
+          See all courses at LinkedIn
         </Link>
       </div>
     </section>

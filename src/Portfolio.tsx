@@ -64,8 +64,8 @@ const Portfolio = () => {
   }
   return (
     <section className={`container ${styles.container}`} ref={ref}>
-      <H2 subtitle="Veja alguns dos meus projetos e como foram feitos">
-        Portfólio
+      <H2 subtitle="Some of my projects and how they were made">
+        Portfolio
       </H2>
       <Modal />
       <div className={styles.projects}>
@@ -82,7 +82,7 @@ const Portfolio = () => {
         ))}
       </div>
       <Link href="https://github.com/RonaldoCReis/">
-        Veja mais no meu Github
+        See more on github
       </Link>
     </section>
   );

@@ -6,8 +6,8 @@ const Home = () => {
   return (
     <main className={`${styles.main} container`}>
       <div className={styles.intro}>
-        <h1>Olá, sou o Ronaldo Reis. Dev Front End</h1>
-        <p>Também sou web designer e exploro outras areas como 3D e game dev</p>
+        <h1>Hi, I'm Ronaldo Reis A Front End Dev</h1>
+        <p>Also a web designer with passion for learning </p>
       </div>
       <div className={styles.donut}>
         <img src={donut} />

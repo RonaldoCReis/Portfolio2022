@@ -37,11 +37,11 @@ const Skills = () => {
         <Card>
           <div className={styles.skills}>
             <div className={styles.row}>
-              <H3>Código</H3>
+              <H3>Coding</H3>
               <ul className={styles.list}>
                 <li className={styles.item} data-aos="fade-down">
                   <i className={styles.icon}>
-                    <img src={reactLogo} alt="React Logo" />
+                    <img loading='lazy' src={reactLogo} alt="React Logo" />
                   </i>
                   <p>React</p>
                 </li>
@@ -51,7 +51,7 @@ const Skills = () => {
                   data-aos-delay="100"
                 >
                   <i className={styles.icon}>
-                    <img src={typescriptLogo} alt="Typescript Logo" />
+                    <img loading='lazy' src={typescriptLogo} alt="Typescript Logo" />
                   </i>
                   <p>Typescript</p>
                 </li>
@@ -61,7 +61,7 @@ const Skills = () => {
                   data-aos-delay="200"
                 >
                   <i className={styles.icon}>
-                    <img src={javascriptLogo} alt="Javascript Logo" />
+                    <img loading='lazy' src={javascriptLogo} alt="Javascript Logo" />
                   </i>
                   <p>Javascript</p>
                 </li>
@@ -71,7 +71,7 @@ const Skills = () => {
                   data-aos-delay="300"
                 >
                   <i className={styles.icon}>
-                    <img src={viteLogo} alt="Vite Logo" />
+                    <img loading='lazy' src={viteLogo} alt="Vite Logo" />
                   </i>
                   <p>Vite</p>
                 </li>
@@ -81,7 +81,7 @@ const Skills = () => {
                   data-aos-delay="400"
                 >
                   <i className={styles.icon}>
-                    <img src={jestLogo} alt="Jest Logo" />
+                    <img loading='lazy' src={jestLogo} alt="Jest Logo" />
                   </i>
                   <p>Jest</p>
                 </li>
@@ -91,14 +91,14 @@ const Skills = () => {
                   data-aos-delay="400"
                 >
                   <i className={styles.icon}>
-                    <img src={recoilLogo} alt="Recoil Logo" />
+                    <img loading='lazy' src={recoilLogo} alt="Recoil Logo" />
                   </i>
                   <p>Recoil</p>
                 </li>
               </ul>
             </div>
             <div className={styles.row}>
-              <H3>Estilos</H3>
+              <H3>Styling</H3>
               <ul className={styles.list}>
                 <li
                   className={styles.item}
@@ -106,7 +106,7 @@ const Skills = () => {
                   data-aos-delay="0"
                 >
                   <i className={styles.icon}>
-                    <img src={cssLogo} alt="Css Logo" />
+                    <img loading='lazy' src={cssLogo} alt="Css Logo" />
                   </i>
                   <p>CSS3</p>
                 </li>
@@ -116,7 +116,7 @@ const Skills = () => {
                   data-aos-delay="100"
                 >
                   <i className={styles.icon}>
-                    <img src={scssLogo} alt="Scss Logo" />
+                    <img loading='lazy' src={scssLogo} alt="Scss Logo" />
                   </i>
                   <p>SCSS</p>
                 </li>
@@ -126,7 +126,7 @@ const Skills = () => {
                   data-aos-delay="200"
                 >
                   <i className={styles.icon}>
-                    <img src={storyBookLogo} alt="Storybook Logo" />
+                    <img loading='lazy' src={storyBookLogo} alt="Storybook Logo" />
                   </i>
                   <p>Storybook</p>
                 </li>
@@ -136,7 +136,7 @@ const Skills = () => {
                   data-aos-delay="300"
                 >
                   <i className={styles.icon}>
-                    <img src={bootstrapLogo} alt="bootstrap Logo" />
+                    <img loading='lazy' src={bootstrapLogo} alt="bootstrap Logo" />
                   </i>
                   <p>Bootstrap</p>
                 </li>
@@ -146,7 +146,7 @@ const Skills = () => {
                   data-aos-delay="300"
                 >
                   <i className={styles.icon}>
-                    <img src={tailWindLogo} alt="tailwind Logo" />
+                    <img loading='lazy' src={tailWindLogo} alt="tailwind Logo" />
                   </i>
                   <p>Tailwind</p>
                 </li>
@@ -161,7 +161,7 @@ const Skills = () => {
                   data-aos-delay="0"
                 >
                   <i className={styles.icon}>
-                    <img src={figmaLogo} alt="Figma Logo" />
+                    <img loading='lazy' src={figmaLogo} alt="Figma Logo" />
                   </i>
                   <p>Figma</p>
                 </li>
@@ -171,14 +171,14 @@ const Skills = () => {
                   data-aos-delay="100"
                 >
                   <i className={styles.icon}>
-                    <img src={adobexdLogo} alt="Adobe XD Logo" />
+                    <img loading='lazy' src={adobexdLogo} alt="Adobe XD Logo" />
                   </i>
                   <p>Adobe XD</p>
                 </li>
               </ul>
             </div>
             <Link href="https://www.linkedin.com/in/ronaldocreis/">
-              Veja mais no meu LinkedIn
+              See more on my LinkedIn
             </Link>
           </div>
         </Card>

@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div style={{ background: '#222127' }}>
       <p style={{ textAlign: 'center', color: '#F8F6FB', padding: '30px' }}>
-        Feito com 💛 por Ronaldo Reis
+        Made with 💛 by Ronaldo Reis
       </p>
     </div>
   );

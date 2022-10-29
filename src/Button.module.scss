@@ -2,13 +2,20 @@
 
 .button {
   border: rem(2) solid $black;
-  color: $gray;
-  background: $black;
+  color: $black;
+  background: transparent;
+  border: 2px solid $black;
   font-size: $font1;
-  padding: rem(15) rem(30);
-  border-radius: rem(2);
+  padding: rem(13) rem(26);
+  border-radius: rem(3);
+  font-weight: 500;
   cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 102%;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  transition: .1s;
   &:hover {
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    background: $black;
+    color: $gray;
   }
 }
