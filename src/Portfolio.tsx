@@ -21,31 +21,31 @@ const Portfolio = () => {
   const projects = [
     {
       title: 'Little Invest',
-      imgUrl: 'src/img/littleinvest.png',
+      imgUrl: '/img/littleinvest.png',
       desc: 'Website de uma corretora de investimentos. O design foi desenvolvido durante o curso de Adobe XD da origamid',
       techs: ['HTML5', 'SCSS', 'Javascript', 'Adobe Xd'],
     },
     {
       title: 'Dogs',
-      imgUrl: 'src/img/dogs.png',
+      imgUrl: '/img/dogs.png',
       desc: 'Uma rede social para cachorros!',
       techs: ['React', 'CSS Modules', 'Javascript', 'Figma'],
     },
     {
       title: 'Imovel Guide',
-      imgUrl: 'src/img/guide.png',
+      imgUrl: '/img/guide.png',
       desc: 'Portal imobiliário onde atuei como desenvolvedor front end e UI Designer',
       techs: ['HTML5', 'Bootstrap', 'CSS5', 'Javascript', 'Jquery', 'Adobe XD'],
     },
     {
       title: 'Design System - Ignite',
-      imgUrl: 'src/img/ignite.png',
+      imgUrl: '/img/ignite.png',
       desc: 'Design system desenvolvido no figma e passado para o storybook',
       techs: ['React', 'Typescript', 'Vite ', 'Tailwind', 'Storybook', 'Figma'],
     },
     {
       title: 'Blocks',
-      imgUrl: 'src/img/blocks.png',
+      imgUrl: '/img/blocks.png',
       desc: 'Uma aplicação web de blocos de anotação e design system com storybook',
       techs: ['React', 'Typescript', 'Recoil', 'Vitest', 'Storybook', 'Figma'],
     },
@@ -64,9 +64,7 @@ const Portfolio = () => {
   }
   return (
     <section className={`container ${styles.container}`} ref={ref}>
-      <H2 subtitle="Some of my projects and how they were made">
-        Portfolio
-      </H2>
+      <H2 subtitle="Some of my projects and how they were made">Portfolio</H2>
       <Modal />
       <div className={styles.projects}>
         {projects.map((project, index) => (
@@ -81,9 +79,7 @@ const Portfolio = () => {
           </div>
         ))}
       </div>
-      <Link href="https://github.com/RonaldoCReis/">
-        See more on github
-      </Link>
+      <Link href="https://github.com/RonaldoCReis/">See more on github</Link>
     </section>
   );
 };
