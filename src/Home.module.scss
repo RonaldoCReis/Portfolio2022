@@ -5,7 +5,7 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 10vh;
-  margin-bottom: 20vh; //tremp
+  margin-bottom: 20vh;
   height: 53vh;
   position: relative;
   margin-bottom: rem(-280);
@@ -50,6 +50,10 @@
   .donut {
     display: none;
   }
+  .main {
+    height: 70vh;
+    margin-top: 0;
+  }
 }
 
 @media (max-width: 680px) {
@@ -61,7 +65,7 @@
 
 @media (max-width: 500px) {
   .main {
-    height: 50vh;
+    height: 70vh;
   }
   .intro h1 {
     font-size: rem(28);

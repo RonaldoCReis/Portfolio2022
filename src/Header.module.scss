@@ -8,7 +8,7 @@
   margin-top: rem(30);
   transition: 0.3s;
 
-  &.active {
+  &.scroll {
     background: #efecf3f4;
     backdrop-filter: blur(5px);
     box-shadow: $shadow;
@@ -31,4 +31,64 @@
   justify-content: flex-start;
   align-items: center;
   margin-left: -10px;
+}
+.menuHamburger {
+  display: none;
+}
+
+.mobileButton {
+  display: none;
+  border: none;
+  padding: 10px;
+  background: transparent;
+  cursor: pointer;
+}
+@media screen and (max-width: 700px) {
+  .headerContainer {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    max-width: rem(300);
+    top: 0;
+    right: 0;
+    margin-top: 0;
+    background: #efecf3f4;
+    overflow: hidden;
+    padding-top: rem(0);
+    transform: translateX(100%);
+    &.mobile {
+      transform: translateX(0);
+    }
+    & .header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    & .nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  .menuHamburger {
+    height: 50px;
+    background: #efecf3f4;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    backdrop-filter: blur(5px);
+    box-shadow: $shadow;
+    transition: 0.3s;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: rem(30);
+    &.mobile {
+      transform: translateY(-100%);
+    }
+  }
+  .mobileButton {
+    display: block;
+  }
 }

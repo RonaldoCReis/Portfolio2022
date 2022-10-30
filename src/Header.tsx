@@ -10,6 +10,7 @@ import Button from './Button';
 import styles from './Header.module.scss';
 import HeaderLink from './HeaderLink';
 import { MainContext } from './MainContext';
+import { List, X } from 'phosphor-react';
 
 const Header = () => {
   const [active, setActive] = React.useState('Home');
@@ -35,6 +36,8 @@ const Header = () => {
 
   const [activeHeader, setActiveHeader] = useState(false);
 
+  const [activeMobile, setActiveMobile] = useState(false);
+
   useEffect(() => {
     setScroll({
       skills: skillsScroll,
@@ -51,7 +54,7 @@ const Header = () => {
   function handleScroll(event: Event) {
     if (window.pageYOffset > 35) setActiveHeader(true);
     else setActiveHeader(false);
-
+    setActiveMobile(false);
     const offset = screen.height / 2.5;
     if (window.pageYOffset >= Math.floor(coursesScroll - offset)) {
       setActive('Studies');
@@ -77,27 +80,47 @@ const Header = () => {
     });
   }
   return (
-    <div
-      className={`${styles.headerContainer} ${
-        activeHeader ? styles.active : ''
-      }`}
-    >
-      <header className={`${styles.header} container`}>
-        <nav className={styles.nav}>
-          {links &&
-            links.map((link) => (
-              <HeaderLink
-                key={link.title}
-                active={active}
-                scrollTo={scroll[link.scroll as keyof typeof scroll]}
-              >
-                {link.title}
-              </HeaderLink>
-            ))}
-        </nav>
-        <Button onClick={handleButton}>Contact me</Button>
-      </header>
-    </div>
+    <>
+      <div
+        className={`${styles.menuHamburger} ${
+          activeMobile ? styles.mobile : ''
+        }`}
+      >
+        <button
+          className={styles.mobileButton}
+          onClick={() => setActiveMobile(!activeMobile)}
+        >
+          <List size={32} />
+        </button>
+      </div>
+      <div
+        className={`${styles.headerContainer} ${
+          activeHeader ? styles.scroll : ''
+        } ${activeMobile ? styles.mobile : ''}`}
+      >
+        <header className={`${styles.header} container`}>
+          <nav className={styles.nav}>
+            <button
+              className={styles.mobileButton}
+              onClick={() => setActiveMobile(!activeMobile)}
+            >
+              <X size={32} />
+            </button>
+            {links &&
+              links.map((link) => (
+                <HeaderLink
+                  key={link.title}
+                  active={active}
+                  scrollTo={scroll[link.scroll as keyof typeof scroll]}
+                >
+                  {link.title}
+                </HeaderLink>
+              ))}
+          </nav>
+          <Button onClick={handleButton}>Contact me</Button>
+        </header>
+      </div>
+    </>
   );
 };
 
