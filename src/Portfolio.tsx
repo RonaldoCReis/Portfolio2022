@@ -21,7 +21,7 @@ const Portfolio = () => {
   const projects = [
     {
       title: 'Little Invest',
-      imgUrl: '/img/littleinvest.png',
+      imgUrl: '/img/littleInvest.png',
       desc: 'Website de uma corretora de investimentos. O design foi desenvolvido durante o curso de Adobe XD da origamid',
       techs: ['HTML5', 'SCSS', 'Javascript', 'Adobe Xd'],
     },
