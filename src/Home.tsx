@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Home.module.scss';
-import donut from './img/Donut.png';
+import donut from '/img/Donut.png';
 
 const Home = () => {
   return (
