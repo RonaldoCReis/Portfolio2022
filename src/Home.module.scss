@@ -31,7 +31,7 @@
       height: 5px;
     }
   }
-  p {
+  h2 {
     opacity: 50%;
     max-width: rem(450);
     font-size: rem(20);
@@ -59,7 +59,10 @@
 @media (max-width: 680px) {
   .intro h1 {
     font-size: rem(38);
-    max-width: rem(500);
+    max-width: rem(360);
+  }
+  .intro h2 {
+    font-size: rem(18);
   }
 }
 
@@ -68,7 +71,7 @@
     height: 70vh;
   }
   .intro h1 {
-    font-size: rem(28);
-    max-width: rem(350);
+    font-size: rem(32);
+    max-width: rem(300);
   }
 }

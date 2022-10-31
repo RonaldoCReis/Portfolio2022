@@ -7,7 +7,7 @@ const Home = () => {
     <main className={`${styles.main} container`}>
       <div className={styles.intro}>
         <h1>Hi, I'm Ronaldo Reis A Front end dev</h1>
-        <p>Also a web designer with passion for learning </p>
+        <h2>Also a web designer with passion for learning </h2>
       </div>
       <div className={styles.donut}>
         <img src={donut} />

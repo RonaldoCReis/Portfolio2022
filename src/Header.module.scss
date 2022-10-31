@@ -56,6 +56,10 @@
     overflow: hidden;
     padding-top: rem(0);
     transform: translateX(100%);
+    & a {
+      font-size: rem(18);
+      margin-bottom: rem(8);
+    }
     &.mobile {
       transform: translateX(0);
     }
