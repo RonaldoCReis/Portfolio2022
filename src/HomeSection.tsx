@@ -1,8 +1,9 @@
+import Image from 'next/image';
 import React from 'react';
 import styles from './Home.module.scss';
-import donut from '/img/Donut.png';
+import donut from '../public/img/Donut.png';
 
-const Home = () => {
+const HomeSection = () => {
   return (
     <main className={`${styles.main} container`}>
       <div className={styles.intro}>
@@ -10,10 +11,10 @@ const Home = () => {
         <h2>Also a web designer with passion for learning </h2>
       </div>
       <div className={styles.donut}>
-        <img src={donut} />
+        <Image alt="Donut 3d" src={donut} />
       </div>
     </main>
   );
 };
 
-export default Home;
+export default HomeSection;

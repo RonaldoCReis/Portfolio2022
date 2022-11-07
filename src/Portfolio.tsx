@@ -7,6 +7,7 @@ import { MainContext } from './MainContext';
 import { useRecoilState } from 'recoil';
 import { modalState, portfolioScrollState } from './context/atoms';
 import Modal from './ui/Modal';
+import Image from 'next/image';
 
 const Portfolio = () => {
   const [scroll, setScroll] = useRecoilState(portfolioScrollState);
@@ -75,7 +76,7 @@ const Portfolio = () => {
             data-aos-delay={50 * index - 50}
             onClick={() => openModal(project)}
           >
-            <img src={project.imgUrl} />
+            <img alt={project.title} src={project.imgUrl} />
           </div>
         ))}
       </div>

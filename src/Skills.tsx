@@ -2,32 +2,31 @@ import React, { useEffect, useRef } from 'react';
 import styles from './Skills.module.scss';
 import Card from './ui/Card';
 import H3 from './ui/H3';
-import reactLogo from '/img/react.png';
-import typescriptLogo from '/img/typescript.png';
-import javascriptLogo from '/img/javascript.png';
-import viteLogo from '/img/vite.png';
-import jestLogo from '/img/jest.png';
-import recoilLogo from '/img/recoil.svg';
-import cssLogo from '/img/css.png';
-import scssLogo from '/img/scss.png';
-import bootstrapLogo from '/img/bootstrap.png';
-import figmaLogo from '/img/figma.png';
-import adobexdLogo from '/img/adobexd.png';
-import storyBookLogo from '/img/Storybook.png';
-import tailWindLogo from '/img/tailwind.png';
+import reactLogo from '../public/img/react.png';
+import typescriptLogo from '../public/img/typescript.png';
+import javascriptLogo from '../public/img/javascript.png';
+import viteLogo from '../public/img/vite.png';
+import jestLogo from '../public/img/jest.png';
+import recoilLogo from '../public/img/recoil.svg';
+import cssLogo from '../public/img/css.png';
+import scssLogo from '../public/img/scss.png';
+import bootstrapLogo from '../public/img/bootstrap.png';
+import figmaLogo from '../public/img/figma.png';
+import adobexdLogo from '../public/img/adobexd.png';
+import storyBookLogo from '../public/img/Storybook.png';
+import tailWindLogo from '../public/img/tailwind.png';
 import Link from './ui/Link';
-import Aos from 'aos';
 // import { MainContext } from './MainContext';
 import { useRecoilState } from 'recoil';
 import { skillsScrollState } from './context/atoms';
 import Wave from './ui/Wave';
 import H2 from './ui/H2';
+import Image from 'next/image';
 
 const Skills = () => {
   const [scroll, setScroll] = useRecoilState(skillsScrollState);
   const skills = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    Aos.init({ offset: 100, duration: 300, once: true });
     if (skills.current) {
       setScroll(
         skills.current.getBoundingClientRect().y + window.pageYOffset - 100
@@ -52,7 +51,7 @@ const Skills = () => {
                 <ul className={styles.list}>
                   <li className={styles.item} data-aos="fade-down">
                     <i className={styles.icon}>
-                      <img loading="lazy" src={reactLogo} alt="React Logo" />
+                      <Image loading="lazy" src={reactLogo} alt="React Logo" />
                     </i>
                     <p>React</p>
                   </li>
@@ -62,7 +61,7 @@ const Skills = () => {
                     data-aos-delay="100"
                   >
                     <i className={styles.icon}>
-                      <img
+                      <Image
                         loading="lazy"
                         src={typescriptLogo}
                         alt="Typescript Logo"
@@ -76,7 +75,7 @@ const Skills = () => {
                     data-aos-delay="200"
                   >
                     <i className={styles.icon}>
-                      <img
+                      <Image
                         loading="lazy"
                         src={javascriptLogo}
                         alt="Javascript Logo"
@@ -90,7 +89,7 @@ const Skills = () => {
                     data-aos-delay="300"
                   >
                     <i className={styles.icon}>
-                      <img loading="lazy" src={viteLogo} alt="Vite Logo" />
+                      <Image loading="lazy" src={viteLogo} alt="Vite Logo" />
                     </i>
                     <p>Vite</p>
                   </li>
@@ -100,7 +99,7 @@ const Skills = () => {
                     data-aos-delay="400"
                   >
                     <i className={styles.icon}>
-                      <img loading="lazy" src={jestLogo} alt="Jest Logo" />
+                      <Image loading="lazy" src={jestLogo} alt="Jest Logo" />
                     </i>
                     <p>Jest</p>
                   </li>
@@ -110,7 +109,11 @@ const Skills = () => {
                     data-aos-delay="400"
                   >
                     <i className={styles.icon}>
-                      <img loading="lazy" src={recoilLogo} alt="Recoil Logo" />
+                      <Image
+                        loading="lazy"
+                        src={recoilLogo}
+                        alt="Recoil Logo"
+                      />
                     </i>
                     <p>Recoil</p>
                   </li>
@@ -125,7 +128,7 @@ const Skills = () => {
                     data-aos-delay="0"
                   >
                     <i className={styles.icon}>
-                      <img loading="lazy" src={cssLogo} alt="Css Logo" />
+                      <Image loading="lazy" src={cssLogo} alt="Css Logo" />
                     </i>
                     <p>CSS3</p>
                   </li>
@@ -135,7 +138,7 @@ const Skills = () => {
                     data-aos-delay="100"
                   >
                     <i className={styles.icon}>
-                      <img loading="lazy" src={scssLogo} alt="Scss Logo" />
+                      <Image loading="lazy" src={scssLogo} alt="Scss Logo" />
                     </i>
                     <p>SCSS</p>
                   </li>
@@ -145,7 +148,7 @@ const Skills = () => {
                     data-aos-delay="200"
                   >
                     <i className={styles.icon}>
-                      <img
+                      <Image
                         loading="lazy"
                         src={storyBookLogo}
                         alt="Storybook Logo"
@@ -159,7 +162,7 @@ const Skills = () => {
                     data-aos-delay="300"
                   >
                     <i className={styles.icon}>
-                      <img
+                      <Image
                         loading="lazy"
                         src={bootstrapLogo}
                         alt="bootstrap Logo"
@@ -173,7 +176,7 @@ const Skills = () => {
                     data-aos-delay="300"
                   >
                     <i className={styles.icon}>
-                      <img
+                      <Image
                         loading="lazy"
                         src={tailWindLogo}
                         alt="tailwind Logo"
@@ -192,7 +195,7 @@ const Skills = () => {
                     data-aos-delay="0"
                   >
                     <i className={styles.icon}>
-                      <img loading="lazy" src={figmaLogo} alt="Figma Logo" />
+                      <Image loading="lazy" src={figmaLogo} alt="Figma Logo" />
                     </i>
                     <p>Figma</p>
                   </li>
@@ -202,7 +205,7 @@ const Skills = () => {
                     data-aos-delay="100"
                   >
                     <i className={styles.icon}>
-                      <img
+                      <Image
                         loading="lazy"
                         src={adobexdLogo}
                         alt="Adobe XD Logo"
