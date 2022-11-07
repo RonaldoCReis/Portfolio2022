@@ -23,6 +23,7 @@
     border-radius: rem(20);
     display: flex;
     gap: rem(45);
+    margin: rem(15);
     & > div {
       flex: 1;
     }
@@ -90,5 +91,23 @@
   }
   to {
     transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .backdrop .modal {
+    flex-direction: column;
+    gap: rem(30);
+    padding: rem(30);
+    max-height: 90vh;
+    overflow: auto;
+    & > div {
+      flex: none;
+
+      height: rem(200);
+    }
+    & ul {
+      padding-bottom: rem(30);
+    }
   }
 }
