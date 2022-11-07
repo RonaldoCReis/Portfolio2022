@@ -52,5 +52,12 @@ body {
   }
 }
 
+@media screen and (max-width: 500px) {
+  .container {
+    padding-left: rem(15);
+    padding-right: rem(15);
+  }
+}
+
 $aos-distance: 20px; // It has to be above import
 @import 'node_modules/aos/src/sass/aos.scss';

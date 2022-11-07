@@ -8,7 +8,7 @@ const HomeSection = () => {
     <main className={`${styles.main} container`}>
       <div className={styles.intro}>
         <h1>Hi, I'm Ronaldo Reis A Front end dev</h1>
-        <h2>Also a web designer with passion for learning </h2>
+        <h2>Also UI/UX designer and mobile developer </h2>
       </div>
       <div className={styles.donut}>
         <Image alt="Donut 3d" src={donut} />

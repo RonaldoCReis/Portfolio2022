@@ -6,3 +6,9 @@
   box-shadow: $shadow;
   border-radius: rem(20);
 }
+
+@media screen and (max-width: 500px) {
+  .card {
+    padding: rem(15);
+  }
+}

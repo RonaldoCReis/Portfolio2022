@@ -7,7 +7,7 @@ const Wave = () => {
       '#wave1',
       { path: '#wave1' },
       { path: '#wave2' },
-      { repeat: 999, duration: 6000, yoyo: true }
+      { repeat: 999, duration: 5000, yoyo: true }
     );
     tween.start();
   }, []);

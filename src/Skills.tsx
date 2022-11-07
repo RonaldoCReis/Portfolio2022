@@ -4,7 +4,7 @@ import Card from './ui/Card';
 import H3 from './ui/H3';
 import reactLogo from '../public/img/react.png';
 import typescriptLogo from '../public/img/typescript.png';
-import javascriptLogo from '../public/img/javascript.png';
+import nextjsLogo from '../public/img/nextjs.png';
 import viteLogo from '../public/img/vite.png';
 import jestLogo from '../public/img/jest.png';
 import recoilLogo from '../public/img/recoil.svg';
@@ -53,7 +53,7 @@ const Skills = () => {
                     <i className={styles.icon}>
                       <Image loading="lazy" src={reactLogo} alt="React Logo" />
                     </i>
-                    <p>React</p>
+                    <p>React / Native</p>
                   </li>
                   <li
                     className={styles.item}
@@ -77,11 +77,11 @@ const Skills = () => {
                     <i className={styles.icon}>
                       <Image
                         loading="lazy"
-                        src={javascriptLogo}
+                        src={nextjsLogo}
                         alt="Javascript Logo"
                       />
                     </i>
-                    <p>Javascript</p>
+                    <p>Next.js</p>
                   </li>
                   <li
                     className={styles.item}
