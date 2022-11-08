@@ -1,13 +1,10 @@
-import React, { useContext, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import H2 from './ui/H2';
 import styles from './Portfolio.module.scss';
 import Link from './ui/Link';
-import Aos from 'aos';
-import { MainContext } from './MainContext';
 import { useRecoilState } from 'recoil';
 import { modalState, portfolioScrollState } from './context/atoms';
 import Modal from './ui/Modal';
-import Image from 'next/image';
 
 const Portfolio = () => {
   const [scroll, setScroll] = useRecoilState(portfolioScrollState);
@@ -19,36 +16,49 @@ const Portfolio = () => {
       setScroll(ref.current.getBoundingClientRect().y + window.pageYOffset);
     console.log(scroll);
   }, [setScroll]);
-  const projects = [
+
+  interface projectsType {
+    title: string;
+    desc: string;
+    techs: string[];
+    imgUrl: string;
+    link: string;
+  }
+  const projects: projectsType[] = [
     {
       title: 'Little Invest',
       imgUrl: '/img/littleInvest.png',
-      desc: 'Website de uma corretora de investimentos. O design foi desenvolvido durante o curso de Adobe XD da origamid',
+      desc: "A ivesment broker website designed on the origamid's adobe xd course and coded by me.",
       techs: ['HTML5', 'SCSS', 'Javascript', 'Adobe Xd'],
+      link: '',
     },
     {
       title: 'Dogs',
       imgUrl: '/img/dogs.png',
-      desc: 'Uma rede social para cachorros!',
+      desc: 'A social network for dogs made with React.',
       techs: ['React', 'CSS Modules', 'Javascript', 'Figma'],
+      link: 'https://dogs.ronaldo-reis.com/',
     },
     {
       title: 'Imovel Guide',
       imgUrl: '/img/guide.png',
-      desc: 'Portal imobiliário onde atuei como desenvolvedor front end e UI Designer',
+      desc: 'A real estate portal where i worked as front-end developer and UI designer.',
       techs: ['HTML5', 'Bootstrap', 'CSS5', 'Javascript', 'Jquery', 'Adobe XD'],
+      link: 'https://imovelguide.com.br/',
     },
     {
       title: 'Design System - Ignite',
       imgUrl: '/img/ignite.png',
-      desc: 'Design system desenvolvido no figma e passado para o storybook',
+      desc: 'A log-in screen design system made with React and Storybook.',
       techs: ['React', 'Typescript', 'Vite ', 'Tailwind', 'Storybook', 'Figma'],
+      link: '',
     },
     {
       title: 'Blocks',
       imgUrl: '/img/blocks.png',
-      desc: 'Uma aplicação web de blocos de anotação e design system com storybook',
+      desc: 'A note taking app made with React, storybook and vitest for automated testing.',
       techs: ['React', 'Typescript', 'Recoil', 'Vitest', 'Storybook', 'Figma'],
+      link: 'https://blocks.ronaldo-reis.com/',
     },
   ];
   interface modalTypes {
@@ -56,6 +66,7 @@ const Portfolio = () => {
     title: string;
     desc: string;
     techs: string[];
+    link: string;
   }
   function openModal(data: modalTypes) {
     setModal({

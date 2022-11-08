@@ -33,5 +33,6 @@ export const modalState = atom({
     title: '',
     desc: '',
     techs: new Array(),
+    link: '',
   },
 });
