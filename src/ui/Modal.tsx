@@ -8,7 +8,11 @@ const Modal = () => {
   const [modal, setModalState] = useRecoilState(modalState);
 
   useEffect(() => {
-    if (modal && modal.isOpen) {
+    if (
+      modal &&
+      modal.isOpen &&
+      window.matchMedia('(min-width: 500px)').matches
+    ) {
       disablePageScroll();
     } else {
       enablePageScroll();
