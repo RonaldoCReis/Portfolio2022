@@ -24,6 +24,9 @@
   align-items: center;
   // margin-right: rem(60);
   font-size: $font2;
+  & p {
+    opacity: 90%;
+  }
 }
 
 .icon {

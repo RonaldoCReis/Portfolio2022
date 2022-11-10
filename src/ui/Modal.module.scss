@@ -39,7 +39,7 @@
 .title {
   font-size: $font4;
   font-weight: 500;
-  margin-bottom: rem(35);
+  margin-bottom: rem(30);
   &::after {
     content: '';
     display: block;
@@ -51,10 +51,11 @@
 
 .desc {
   font-size: $font1;
+  opacity: 80%;
   font-family: 'source sans pro', sans-serif;
   font-size: rem(16);
   max-width: rem(300);
-  margin-bottom: rem(15);
+  margin-bottom: rem(8);
 }
 
 .title2 {
