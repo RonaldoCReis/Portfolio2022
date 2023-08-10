@@ -19,10 +19,10 @@ const Contact = () => {
       </div>
       <div className={styles.links}>
         <a
-          href="https://api.whatsapp.com/send?phone=5511942594783"
+          href="https://api.whatsapp.com/send?phone=5511943298766"
           target="_blank"
         >
-          55 11 94259-4783
+          55 11 94329-8766
         </a>
         <a href="mailto:ronaldocreis7@gmail.com">ronaldocreis7@gmail.com</a>
         <a href="https://linkedin.com/in/ronaldocreis" target="_blank">
